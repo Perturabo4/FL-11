@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  font-family: roboto;
+  background-color:  #0b192f;
+}
+.post-1,
+.posts .img-wrap a.post-1:hover::before {
+	background: #B71757;
+}
+.post-2,
+.posts .img-wrap a.post-2:hover::before {
+	background: #0D7E71;
+}
+.post-3,
+.posts .img-wrap a.post-3:hover::before {
+	background: #b1660e;
+}
+.post-4,
+.posts .img-wrap a.post-4:hover::before {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 98%;
+  max-width: 1018px;
+}
+.header {
+  display: flex;
+  min-height: 82px;
+  margin-bottom: 18px;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #162b4d;
+}
+.header strong {
+  font-size: 2rem;
+  font-weight: 200;
+}
+.header strong a span {
+  color: #b42960;
+  font-weight: 300;
+}
+.menu-switch-btn {
+  position: relative;
+  display: none;
+  height: 14px;
+  width: 14px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.menu-switch-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 1px;
+  background-color: #ffffff;
+}
+.header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header .navigation {
+  width: 400px;
+  display: flex;
+  align-self: stretch;
+}
+.header .navigation a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  transition: background, .2s;
+  color: #ffffff;
+}
+.header .navigation a:hover {
+  background-color: rgba(255,255,255, .2);
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.aside {
+  font-size: .8rem;
+  width: 24%;
+  margin-left: 18px;
+}
+.aside img {
+  width: 100%;
+}
+.aside .img-wrap {
+  margin-bottom: -4px;
+}
+.aside-post {
+  margin-bottom: 18px;
+}
+.aside-post-text {
+  padding: 14px 28px;
+  background-color: #ffffff;
+}
+.aside-post-text h3 {
+  margin: 12px 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.aside-post-text h3 a {
+  text-decoration: none;
+  color: #000000;
+}
+.aside-post-text p {
+  line-height: 1.6;
+  font-weight: 300;
+}
+.main-content {
+  flex: 1;
+}
+.main-content-article {
+  display: flex;
+  width: 100%;
+  text-align: right;
+}
+.main-content-article:nth-child(odd){
+  flex-direction: row-reverse;
+  text-align: left;
+}
+.main-content-article:nth-child(even) .article-text{
+  align-items: flex-end;
+}
+.main-content-article:nth-child(even) .article-text .time{
+  left: 2%;
+}
+.main-content-article:nth-child(odd) .article-text .time{
+  right: 2%;
+}
+.posts .img-wrap {
+  overflow: hidden;
+  flex: 1;
+}
+.posts .img-wrap a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.posts .img-wrap a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  transform: scaleX(0);
+  transition: transform, .3s;
+  transform-origin: right;
+  z-index: 10;
+}
+.main-content-article:nth-child(even) .img-wrap a::before {
+  transform-origin: left;
+}
+.posts .img-wrap a:hover::before {
+  transform: scaleX(1);
+}
+.posts .img-wrap img {
+  height: 100%;
+  width: 100%;
+}
+.article-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  padding: 4%;
+  flex: 1;
+  font-size: .8rem;
+}
+.last-post,
+.article-text {
+  color: #ffffff;
+}
+.article-text .time,
+.last-post .time{
+  position: absolute;
+  top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.6rem;
+  opacity: .3;
+}
+.last-post .time {
+  right: 2%;
+}
+.article-text .time span,
+.last-post .time span {
+  font-size: 1.4rem;
+}
+.article-text h2,
+.last-post h2  {
+  margin: 0 0 2% 0;
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+.article-text h2,
+.article-text p {
+  max-width: 256px;
+}
+.article-text h2 a,
+.last-post h2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.article-text h2 a:hover,
+.last-post h2 a:hover {
+  opacity: .8;
+}
+.last-post h2,
+.last-post p {
+  max-width: 90%;
+}
+.article-text h2,
+.article-text p,
+.article-text .time,
+.last-post .time,
+.last-post h2,
+.last-post p {
+  font-weight: 200;
+}
+.article-text p,
+.last-post p,
+.footer p  {
+  margin-bottom: 0;
+  line-height: 1.5;
+  opacity: .8;
+}
+.footer p {
+  margin-top: 0;
+}
+.last-post {
+  position: relative;
+  padding: 4%;
+  font-size: .8rem;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  padding: 3%;
+  background-color: #162b4d;
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #ffffff;
+  font-weight: 200;
+}
+.copy {
+  flex: 8;
+}
+.info {
+  flex: 1;
+}
+@media (max-width: 1400px) {
+  .menu-switch-btn {
+    display: none;
+  }
+} 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .header strong {
+    margin: 30px 0;
+  }
+  .header .navigation {
+    display: none;
+  }
+  .menu-switch-btn {
+    display: inline-block;
+  }
+  .main-content-article:nth-child(even),
+  .main-content-article:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  .main-content-article:nth-child(even) .article-text{
+    align-items: flex-start;
+  }
+  .main-content-article:nth-child(even) .article-text .time {
+    align-self: center;
+  }
+  .main-content-article {
+    text-align: left;
+  }
+  .article-text {
+    max-width: 100%;
+    padding: 8%;
+  }
+  .posts .img-wrap {
+    margin-bottom: -4px;
+  }
+  .article-text .time,
+  .last-post .time {
+    position: static;
+  }
+  .article-text h2,
+  .article-text p,
+  .last-post h2,
+  .last-post p {
+    max-width: 100%;
+  }
+  .article-text p,
+  .last-post p {
+    margin-bottom: 60px;
+  }
+  .aside {
+    width: 40%;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .copy {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+  }
+  .aside {
+    width: 100%;
+    margin-left: 0;
+  }
+  .footer {
+    padding: 6%;
+  }
+}
