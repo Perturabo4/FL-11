@@ -3,7 +3,7 @@ const one = 1,
     three = 3,
     five = 5,
     testArr = [one,two,three];
-// 0. ************************************************************
+
 const getNumbers = (str) => {
     let arr = [],
         i = 0,
@@ -19,7 +19,7 @@ const getNumbers = (str) => {
 } 
 
 getNumbers('wrt2nm,67jk8');
-// 1. *************************************************************
+
 const findTypes = (...args) => {
     const obj = {};
     let type;
@@ -32,7 +32,7 @@ const findTypes = (...args) => {
 }
 
 findTypes(null, five, 'hello');
-// 2. *************************************************************
+
 const executeforEach = (arr, fun) => {
     if(arr.length === 0){
         return;
@@ -44,7 +44,7 @@ executeforEach(testArr, function(el) {
         console.log(el);
     }
  );
-// 3. *************************************************************
+
 const mapArray = (arr, fun) => {
     const newArr = [];
     const cover = f => (arg) => newArr.push(f(arg));
@@ -53,8 +53,8 @@ const mapArray = (arr, fun) => {
 
     return newArr;
 }
-mapArray(testArr, el => el + three ); 
-// 4. *************************************************************
+mapArray(testArr, el => el + three );
+
 const filterArray = (arr, fun) => {
     const newArr = [];
     const cover = (f) => (arg) => {
@@ -66,8 +66,8 @@ const filterArray = (arr, fun) => {
 
     return newArr;
 }
-filterArray(testArr, el => el > two ); 
-// 5. *************************************************************
+filterArray(testArr, el => el > two );
+
 const showFormattedDate = (date) => {
     const slicePos = 4;
     return date.toDateString() === 'Invalid Date' 
@@ -76,11 +76,10 @@ const showFormattedDate = (date) => {
 };
 showFormattedDate(new Date('2019-01-27T01:10:00')); 
 
-// 6. *************************************************************
 const canConvertToDate = (str) => new Date(str).toDateString() !== 'Invalid Date';
+
 canConvertToDate('2016-13-18T00:00:00');
 
-// 7. *************************************************************
 const daysBetween = (date1, date2) => {
     const mSecondsInDay = 86400000,
           mSeconds = date1 < date2 ? date2 - date1 : date1 - date2,
@@ -91,7 +90,6 @@ const daysBetween = (date1, date2) => {
 
 daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'));  
 
-// 8. *************************************************************
 const data = [
     {
       '_id': '5b5e3168c6bf40f2c1235cd6',
@@ -135,7 +133,6 @@ const getAmountOfAdultPeople = (data) => {
 }
 getAmountOfAdultPeople(data);
 
-// 9. *************************************************************
 const keys = (obj) => {
     const arr = [];
 
@@ -147,8 +144,6 @@ const keys = (obj) => {
     return arr;
 }
 keys({keyOne: 1, keyTwo: 2, keyThree: 3}); 
-
-// 10. *************************************************************
 
 const values = (obj) => {
     const arr = [];
