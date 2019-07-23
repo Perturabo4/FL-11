@@ -38,7 +38,7 @@ const createToDoHeader = () => {
     const header = newElement('div', 'header'),
             capture = newElement('div', 'capture', 'TODO Cat List'),
             addBlock = newElement('div', 'header-add-section'),
-            inp = newElement('input', null, null, {type: 'text', id: 'add-action-inp'}),
+            inp = newElement('input', null, null, {type: 'text', id: 'add-action-inp', placeholder: 'Add new action'}),
             btn = newElement('button', null, null, {id: 'add-action-btn', disabled: 'disabled'}),
             addIcon = newElement('i', 'material-icons add', 'add_box');
 
