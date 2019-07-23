@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body,
+#root {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.container {
+    width: 80%;
+    max-width: 600px;
+    color: skyblue;
+}
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid skyblue;
+}
+.capture {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.header-add-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-action-inp {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0 10px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+#add-action-btn {
+    border: none;
+    background: transparent;
+}
+#add-action-btn:disabled,
+#add-action-btn:disabled .material-icons.add{
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, .2);
+} 
+.material-icons.add { 
+    font-size: 38px;
+    color:skyblue;
+    cursor: pointer;  
+}
+#todo-list {
+    position: relative;
+}
+#todo-list li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: move;
+}
+#todo-list li label.checkbox {
+    position: relative;
+    margin-right: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#todo-list li.done label.checkbox .material-icons.done{
+    display: inline-block;
+} 
+#todo-list li input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: -4px;
+}
+#todo-list li.edit label,
+#todo-list li.edit .todo-list-text,
+#todo-list li.edit i.edit,
+#todo-list li.edit i.delete {
+    display: none;
+}
+
+.material-icons.done {
+    display: none;
+}
+.todo-list-text {
+    display: inline-block;
+    margin-right: 4px;
+}
+.todo-list-edit {
+    display: inline-block;
+    width: 40%;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+.material-icons.edit {
+    cursor: pointer;
+}
+.material-icons.delete {
+    margin-left: auto;
+    cursor: pointer;
+}
+.material-icons.save {
+    cursor: pointer;
+}
+.full-list {
+    font-size: 18px;
+    color: red;
+}
+
